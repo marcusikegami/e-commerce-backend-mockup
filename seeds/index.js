@@ -7,6 +7,9 @@ const sequelize = require('../config/connection');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
+  // sequelize.query('SET FOREIGN_KEY_CHECKS = 0');
+  // sequelize.sync({force: true});
+  // sequelize.query('SET FOREIGN_KEY_CHECKS = 1');
   console.log('\n----- DATABASE SYNCED -----\n');
   await seedCategories();
   console.log('\n----- CATEGORIES SEEDED -----\n');
