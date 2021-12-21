@@ -36,9 +36,24 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id
     },
-    attributes: ['id', 'product_name',]
-
-  })
+    attributes: ['id', 'product_name', 'price', 'stock'],
+    include: [
+      {
+        model: Category,
+        key: 'id'
+      },
+      {
+        model: Tag,
+        as: 'tags',
+        key: 'tag_id'
+      }
+    ]
+  }) 
+    .then(productData => res.json(productData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    })
 });
 
 // create new product
