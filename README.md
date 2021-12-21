@@ -16,7 +16,7 @@ This program is a demonstration of a basic website server that enables database 
 
 Refer to the installation tutorial on my YouTube linked below.
 
-[e-commerce-backend-mockup Usage and Installation Tutorial] (https://youtu.be/nFnQ9gipjks)
+[e-commerce-backend-mockup Usage and Installation Tutorial](https://youtu.be/nFnQ9gipjks)
 
 ## Usage
 
